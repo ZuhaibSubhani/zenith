@@ -34,7 +34,7 @@ const userSchema = new Schema({
         }],
         reviews:[{
             type:mongoose.Schema.Types.ObjectId,
-            ref:"ratings"
+            ref:"reviews"
         }],
         createDate:{
             type:Date,

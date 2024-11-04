@@ -1,3 +1,8 @@
 const app = require(".");
+const connectDb = require("./config/db");
 
-app.listen(3000);
+const PORT = 3000;
+app.listen(PORT, async() => {
+    await connectDb();
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
